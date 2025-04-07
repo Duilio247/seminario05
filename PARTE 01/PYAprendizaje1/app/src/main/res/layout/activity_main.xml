@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="18dp"
+    android:background="@drawable/background_image"
+    tools:context=".MainActivity">
+
+    <!-- Nombre -->
+    <TextView
+        android:id="@+id/text_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="8dp"/>
+
+    <EditText
+        android:id="@+id/edit_nombre"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/text_nombre"
+        android:hint="Ingresa tu nombre"
+        android:background="@drawable/edittext_rounded"
+        android:padding="12dp"
+        android:textSize="16sp"/>
+
+    <!-- Edad -->
+    <TextView
+        android:id="@+id/text_edad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_nombre"
+        android:text="Edad"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="8dp"/>
+
+    <EditText
+        android:id="@+id/edit_edad"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/text_edad"
+        android:hint="Ingresa tu edad"
+        android:background="@drawable/edittext_rounded"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:inputType="number"/>
+
+    <!-- ID de Alumno -->
+    <TextView
+        android:id="@+id/text_id_alumno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_edad"
+        android:text="ID de Alumno"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="8dp"/>
+
+    <EditText
+        android:id="@+id/edit_id_alumno"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/text_id_alumno"
+        android:hint="Ingresa tu ID de Alumno"
+        android:background="@drawable/edittext_rounded"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:inputType="number"/>
+
+    <!-- Contenedor para los botones -->
+    <LinearLayout
+        android:id="@+id/button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_id_alumno"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_registrar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Registrar"
+            android:background="@drawable/button_rounded"
+            android:textColor="@android:color/white"/>
+
+        <Button
+            android:id="@+id/btn_consultar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Consultar"
+            android:background="@drawable/button_rounded"
+            android:textColor="@android:color/white"/>
+
+        <Button
+            android:id="@+id/btn_eliminar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Eliminar"
+            android:background="@drawable/button_rounded"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
+    <!-- Botón de Actualizar -->
+    <Button
+        android:id="@+id/btn_actualizar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_container"
+        android:layout_marginTop="10dp"
+        android:text="Actualizar"
+        android:background="@drawable/button_rounded"
+        android:textColor="@android:color/white"/>
+
+    <!-- Lista de visitas -->
+    <ListView
+        android:id="@+id/list_visitas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_actualizar"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="5dp"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

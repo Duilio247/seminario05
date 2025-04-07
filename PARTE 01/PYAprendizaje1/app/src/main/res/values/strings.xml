@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PYAprendizaje1</string>
+    <string name="nombre">NOMBRE</string>
+    <string name="empresa">EMPRESA</string>
+    <string name="proposito">PROPOSITO</string>
+    <string name="registrar">REGISTRAR</string>
+    <string name="consultar">CONSULTAR</string>
+    <string name="visitas">VISITAS</string>
+
+</resources>

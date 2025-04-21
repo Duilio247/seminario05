@@ -32,13 +32,14 @@
 
             <ImageView
                 android:id="@+id/edit_avatar"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
-                android:src="@drawable/default_avatar"
-                android:scaleType="centerCrop" />
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_avatar" />
 
             <Button
                 android:id="@+id/button_select_image"
@@ -67,25 +68,39 @@
                 android:layout_marginBottom="16dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edit_specialty"
+                    android:id="@+id/edit_profession"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Especialidad *"
+                    android:hint="Profesión *"
                     android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp">
+                android:layout_marginBottom="24dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Correo *"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edit_phone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Teléfono *"
+                    android:hint="Teléfono"
                     android:inputType="phone" />
             </com.google.android.material.textfield.TextInputLayout>
+
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -98,7 +113,9 @@
                     android:layout_height="wrap_content"
                     android:hint="Biografía"
                     android:inputType="textMultiLine"
-                    android:minLines="3" />
+                    android:minLines="3"
+                    android:maxLines="5"
+                    android:gravity="top" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button

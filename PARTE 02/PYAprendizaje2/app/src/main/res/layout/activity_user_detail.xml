@@ -53,23 +53,39 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="16dp"
-                android:text="Nombre del Abogado"
+                android:text="Nombre del usuario"
                 android:textSize="18sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Especialidad"
+                android:text="Profesión"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/detail_specialty"
+                android:id="@+id/detail_profession"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="16dp"
-                android:text="Especialidad del Abogado"
+                android:text="Profesión del usuario"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Correo Electrónico"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/detail_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="16dp"
+                android:text="Correo del usuario"
                 android:textSize="18sp" />
 
             <TextView
@@ -85,7 +101,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="16dp"
-                android:text="Teléfono de contacto"
+                android:text="Teléfono del usuario"
                 android:textSize="18sp" />
 
             <TextView
@@ -100,7 +116,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="Biografía del abogado"
+                android:text="Biografía del usuario"
                 android:textSize="16sp" />
 
         </LinearLayout>

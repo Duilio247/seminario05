@@ -1,3 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">PYAprendizaje2</string>
+    <string name="app_name">PyAprendizaje2</string>
+    <string name="action_settings">Configuración</string>
+    <string name="title_activity_users">Usuarios</string>
+    <string name="title_activity_user_detail">Detalle de Usuario</string>
+    <string name="title_activity_add_user">Nuevo Usuario</string>
+    <string name="title_activity_edit_user">Editar Usuario</string>
 </resources>

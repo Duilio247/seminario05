@@ -34,7 +34,11 @@ public class UserDetailActivity extends AppCompatActivity {
         // Configurar Toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        // Verificar que el ActionBar no sea null antes de configurar el "Up Button"
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         dbHelper = new UserDbHelper(this);
         userId = getIntent().getStringExtra(UsersActivity.EXTRA_USER_ID);
@@ -58,6 +62,7 @@ public class UserDetailActivity extends AppCompatActivity {
         loadUserDetails();
     }
 
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -76,7 +81,7 @@ public class UserDetailActivity extends AppCompatActivity {
                 TextView nameTextView = findViewById(R.id.detail_name);
                 TextView professionTextView = findViewById(R.id.detail_profession);
                 TextView emailTextView = findViewById(R.id.detail_email);
-                TextView phoneTextView = findViewById(R.id.detail_phone); // Añadido para el teléfono
+                TextView phoneTextView = findViewById(R.id.detail_phone);
                 ImageView avatarImageView = findViewById(R.id.detail_avatar);
                 TextView bioTextView = findViewById(R.id.detail_bio);
 
@@ -84,7 +89,6 @@ public class UserDetailActivity extends AppCompatActivity {
                 professionTextView.setText(user.getProfession());
                 emailTextView.setText(user.getEmail());
 
-                // Mostrar teléfono
                 if (user.getPhone() != null && !user.getPhone().isEmpty()) {
                     phoneTextView.setText(user.getPhone());
                 } else {
@@ -97,11 +101,9 @@ public class UserDetailActivity extends AppCompatActivity {
                     bioTextView.setText("Sin biografía disponible");
                 }
 
-                // Cargar avatar si existe
                 if (user.getAvatarUri() != null && !user.getAvatarUri().isEmpty()) {
                     avatarImageView.setImageURI(Uri.parse(user.getAvatarUri()));
                 } else {
-                    // Usar avatar predeterminado
                     avatarImageView.setImageResource(R.drawable.default_avatar);
                 }
             }
@@ -128,15 +130,18 @@ public class UserDetailActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if (id == android.R.id.home) {
-            onBackPressed();
-            return true;
-        } else if (id == R.id.action_delete) {
+        if (id == R.id.action_delete) {
             showDeleteConfirmationDialog();
             return true;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        finish(); // Regresa a la pantalla anterior de forma segura
+        return true;
     }
 
     private void showDeleteConfirmationDialog() {

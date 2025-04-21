@@ -14,7 +14,7 @@ import java.util.UUID;
 
 public class UserDbHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "Users.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;  // Versión incrementada
 
     // Definición de tabla
     private static final String TABLE_USERS = "user";
@@ -24,8 +24,8 @@ public class UserDbHelper extends SQLiteOpenHelper {
     private static final String COLUMN_PROFESSION = "profession";
     private static final String COLUMN_EMAIL = "email";
     private static final String COLUMN_PHONE = "phone";
-    private static final String COLUMN_BIO = "bio"; // Nuevo campo BIO
-    private static final String COLUMN_AVATAR_URI = "avatarUri";
+    private static final String COLUMN_BIO = "bio"; // Nuevo campo
+    private static final String COLUMN_AVATAR_URI = "avatarUri"; // Nuevo campo
 
     public UserDbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -47,8 +47,10 @@ public class UserDbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_USERS);
-        onCreate(db);
+        if (oldVersion < 2) {
+            db.execSQL("ALTER TABLE " + TABLE_USERS + " ADD COLUMN " + COLUMN_BIO + " TEXT;");
+            db.execSQL("ALTER TABLE " + TABLE_USERS + " ADD COLUMN " + COLUMN_AVATAR_URI + " TEXT;");
+        }
     }
 
     // CREATE

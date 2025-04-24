@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="80dp"
-        android:text="Zentry Login"
+        android:text="Zentry"
         android:textSize="32sp"
         android:textStyle="bold" />
 

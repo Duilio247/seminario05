@@ -30,6 +30,8 @@
         <!-- Perfil de usuario -->
         <activity android:name=".ProfileActivity" />
 
+
+
     </application>
 
 </manifest>

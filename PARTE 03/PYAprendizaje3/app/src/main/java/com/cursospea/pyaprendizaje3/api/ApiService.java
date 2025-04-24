@@ -15,7 +15,4 @@ public interface ApiService {
     Call<LoginResponse> loginUser(@Body LoginRequest loginRequest);
 
 
-
-
-
 }

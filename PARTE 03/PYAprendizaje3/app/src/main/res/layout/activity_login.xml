@@ -27,6 +27,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="8dp"
         android:text="Ingresa tus credenciales"
+        android:textColor="@color/purple_200"
         android:textSize="16sp"
         android:fontFamily="sans-serif"/>
 
@@ -37,9 +38,11 @@
         android:layout_below="@id/subtitleTextView"
         android:layout_marginTop="60dp"
         android:hint="Email"
+        android:textColorHint="@color/purple_200"
         android:inputType="textEmailAddress"
         android:padding="16dp"
-        android:background="@drawable/edit_text_background" />
+        android:background="@drawable/edit_text_background"
+        android:textColor="@color/editTextTextColorLight" />
 
     <EditText
         android:id="@+id/passwordEditText"
@@ -48,9 +51,12 @@
         android:layout_below="@id/emailEditText"
         android:layout_marginTop="16dp"
         android:hint="Password"
+        android:textColorHint="@color/purple_200"
         android:inputType="textPassword"
         android:padding="16dp"
-        android:background="@drawable/edit_text_background" />
+        android:background="@drawable/edit_text_background"
+        android:textColor="@color/editTextTextColorLight" />
+
 
     <Button
         android:id="@+id/loginButton"

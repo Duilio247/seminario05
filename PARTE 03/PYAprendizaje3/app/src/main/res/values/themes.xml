@@ -12,5 +12,9 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <!-- themes de main mode light-->
+        <item name="android:windowBackground">@color/background_color_light</item>
+        <item name="android:textColorPrimary">@color/buttonTextColorLight</item>
+
     </style>
 </resources>

@@ -33,23 +33,30 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        // Inicializar vistas
         emailEditText = findViewById(R.id.emailEditText);
         passwordEditText = findViewById(R.id.passwordEditText);
         loginButton = findViewById(R.id.loginButton);
         progressBar = findViewById(R.id.progressBar);
 
-        // Inicializar SessionManager
         sessionManager = new SessionManager(getApplicationContext());
 
-        // Si ya está logueado, ir al perfil
         if (sessionManager.isLoggedIn()) {
             startActivity(new Intent(LoginActivity.this, ProfileActivity.class));
             finish();
         }
 
-        // Acción del botón de login
         loginButton.setOnClickListener(v -> loginUser());
+
+        // al presionar Enter en el teclado = iniciar sesión
+        passwordEditText.setOnEditorActionListener((v, actionId, event) -> {
+            loginUser();
+            View view = this.getCurrentFocus();
+            if (view != null) {
+                android.view.inputmethod.InputMethodManager imm = (android.view.inputmethod.InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+            }
+            return true;
+        });
     }
 
     private void loginUser() {
@@ -69,8 +76,9 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
-        // Mostrar progreso
+        // Mostrar progreso y desactivar botón
         progressBar.setVisibility(View.VISIBLE);
+        loginButton.setEnabled(false);  // Desactiva el botón para evitar spam
 
         // Crear objeto de login
         LoginRequest loginRequest = new LoginRequest(email, password);
@@ -83,14 +91,19 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 progressBar.setVisibility(View.GONE);
+                loginButton.setEnabled(true);  // Reactiva el botón
+
                 if (response.isSuccessful() && response.body() != null) {
                     LoginResponse loginResponse = response.body();
 
                     if (loginResponse.isSuccess()) {
-                        // Guardar token
                         sessionManager.saveToken(loginResponse.getToken());
                         Toast.makeText(LoginActivity.this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(LoginActivity.this, ProfileActivity.class));
+
+                        Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
+                        startActivity(intent);
+                        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+
                         finish();
                     } else {
                         Toast.makeText(LoginActivity.this, loginResponse.getMessage(), Toast.LENGTH_LONG).show();
@@ -103,6 +116,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<LoginResponse> call, Throwable t) {
                 progressBar.setVisibility(View.GONE);
+                loginButton.setEnabled(true);  // Reactiva el botón
+
                 Toast.makeText(LoginActivity.this, "Error de conexión: " + t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });

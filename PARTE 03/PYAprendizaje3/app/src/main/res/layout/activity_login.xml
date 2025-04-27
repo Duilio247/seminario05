@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
+    android:background="@color/background_color_login"
     tools:context=".LoginActivity">
 
     <TextView
@@ -12,9 +13,11 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="80dp"
-        android:text="Zentry"
+        android:text="Login de Usuario"
         android:textSize="32sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="@color/purple_700"
+        android:fontFamily="sans-serif-condensed"/>
 
     <TextView
         android:id="@+id/subtitleTextView"
@@ -24,7 +27,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="8dp"
         android:text="Ingresa tus credenciales"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:fontFamily="sans-serif"/>
 
     <EditText
         android:id="@+id/emailEditText"

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">PYAprendizaje3</string>
+    <string name="app_name">Zentry</string>
     <string name="login">Iniciar Sesión</string>
     <string name="logout">Cerrar Sesión</string>
     <string name="email_hint">Email</string>
     <string name="password_hint">Contraseña</string>
-    <string name="welcome">Bienvenido a PYAprendizaje3</string>
+    <string name="welcome">Bienvenido a Zentry</string>
     <string name="profile">Perfil de Usuario</string>
     <string name="login_failed">Error al iniciar sesión. Intenta nuevamente.</string>
     <string name="invalid_credentials">Credenciales inválidas.</string>

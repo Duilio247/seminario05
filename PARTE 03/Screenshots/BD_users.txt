@@ -1,0 +1,20 @@
+users_db = {
+    'empleado1@zentry.com': {
+        'password': 'password123',
+        'name': 'Juan Pérez',
+        'role': 'analista',
+        'id': str(uuid.uuid4())
+    },
+    'empleado2@zentry.com': {
+        'password': 'secure456',
+        'name': 'María Gómez',
+        'role': 'gerente',
+        'id': str(uuid.uuid4())
+    },
+    'admin@zentry.com': {
+        'password': 'admin789',
+        'name': 'Admin Zentry',
+        'role': 'administrador',
+        'id': str(uuid.uuid4())
+    }
+}

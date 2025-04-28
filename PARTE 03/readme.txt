@@ -1,4 +1,4 @@
-# Zentry - Proyecto de Registro de Usuario y Autenticación
+# Zentry - Proyecto de Registro de Usuario y Autenticación con API
 
 ## Características
 

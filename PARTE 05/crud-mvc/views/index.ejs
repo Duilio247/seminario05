@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Usuarios</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <h1>Lista de Usuarios</h1>
+
+  <div class="toolbar">
+    <div class="search-box">
+      <i class="fas fa-search"></i>
+      <input type="text" id="buscador" placeholder="Buscar usuario...">
+    </div>
+    <a href="/nuevo" class="btn-verde"><i class="fas fa-user-plus"></i> Nuevo Usuario</a>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% users.forEach(user => { %>
+        <tr>
+          <td><%= user.id %></td>
+          <td><%= user.nombre %></td>
+          <td><%= user.correo %></td>
+          <td class="actions">
+            <a href="/editar/<%= user.id %>" class="btn-amarillo"><i class="fas fa-edit"></i> Editar</a>
+            <a href="/eliminar/<%= user.id %>" class="btn-rojo" onclick="return confirm('¿Eliminar este usuario?')"><i class="fas fa-trash-alt"></i> Eliminar</a>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+
+  <script src="/search.js"></script>
+</body>
+</html>

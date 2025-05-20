@@ -1,0 +1,14 @@
+https://www.tinkercad.com/things/lAn2H3h3U1k-interface-de-nave-espacial
+https://www.tinkercad.com/things/0nUJh9C7rg6-letras-en-display-7-seg
+https://www.tinkercad.com/things/gpvV5X9YKv5-led-con-control-de-brillo-por-potenciometro-fotoresistencia
+https://www.tinkercad.com/things/6e4gqm9hGJ5-multivibrador-astable-con-555-led-intermitente
+https://www.tinkercad.com/things/erJQIMxRG2T-lampara-de-mezcla-de-colores
+https://www.tinkercad.com/things/jOQvM3l461d-mecanismo-de-bloqueo-secreto
+https://www.tinkercad.com/things/aew5vuEM6vm-semaforo-con-55-y-74hc4017
+https://www.tinkercad.com/things/4sRyWFVOO1s-sistema-de-alarma-con-sensor-pir
+https://www.tinkercad.com/things/3qgqRok4uko-sistema-de-semaforo-con-cuenta-regresiva-en-display-de-7-seg
+https://www.tinkercad.com/things/72BQ1gYWSsb-sistema-de-seguridad-con-teclado-servomotor-y-pantalla-lcd
+https://www.tinkercad.com/things/hzd75hmlL2h-bola-de-crystal-con-pantalla-lcd
+https://www.tinkercad.com/things/gpQ15JqnpLg-numeros-en-display-de-7-seg
+https://www.tinkercad.com/things/cMR1hw0TXFY-termometro-digital-con-pantalla-lcd
+https://www.tinkercad.com/things/6Hlqa9T2mX7-detector-de-luz-con-pantalla-lcd

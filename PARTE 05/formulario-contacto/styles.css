@@ -1,0 +1,194 @@
+/* styles.css - Archivo de estilos para el formulario de contacto */
+
+/* Reset y configuración básica */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilos del cuerpo y fondo */
+body {
+  background-image: url('fondo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  padding: 20px;
+}
+
+/* Contenedores principales */
+.container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Estilos del formulario */
+form {
+  background: rgba(255, 255, 255, 0.15); /* Fondo semitransparente */
+  backdrop-filter: blur(15px);          /* Efecto de desenfoque */
+  -webkit-backdrop-filter: blur(15px);  /* Compatibilidad Safari */
+  padding: 2.5rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25); /* Más contraste */
+  width: 100%;
+  max-width: 500px;
+  transition: transform 0.3s ease;
+  color: #000; /* Asegura que el texto sea legible */
+}
+
+form:hover {
+  transform: translateY(-5px);
+}
+
+/* Estilos del título */
+h2 {
+  color: #080e17;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+h2:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, #080e17, #a7bfe8);
+}
+
+/* Grupos de campos del formulario */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* Estilos de etiquetas */
+label {
+  color: #020202;
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+  font-size: 1rem;
+}
+
+/* Estilos de campos de entrada */
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border: .5px solid #dedede;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.2);  /* Fondo semitransparente */
+  backdrop-filter: blur(12px);                 /* Desenfoque del fondo */
+  -webkit-backdrop-filter: blur(12px);         /* Safari */
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);  /* Sombra para contraste */
+
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #4a6fa5;
+  box-shadow: 0 0 5px rgba(74, 111, 165, 0.3);
+}
+
+input::placeholder {
+    color: black;
+    opacity: 1;
+}
+
+input::placeholder, textarea::placeholder {
+  color: black;
+  font-size: 0.9rem;
+}
+
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Estilos del botón */
+button {
+  background: linear-gradient(to right, #196deb, #6889bb);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 100%;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(74, 111, 165, 0.3);
+}
+
+button:hover {
+  background: linear-gradient(to right, #3e5d8a, #5a7bae);
+  box-shadow: 0 6px 20px rgba(74, 111, 165, 0.4);
+}
+
+/* Estilos para mensajes de error y éxito */
+.error-mensaje {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+
+.success-mensaje {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Animaciones para campos del formulario */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+form > * {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+form > *:nth-child(1) { animation-delay: 0.1s; }
+form > *:nth-child(2) { animation-delay: 0.2s; }
+form > *:nth-child(3) { animation-delay: 0.3s; }
+form > *:nth-child(4) { animation-delay: 0.4s; }
+
+/* Diseño responsivo */
+@media (max-width: 600px) {
+  form {
+    padding: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  input, textarea, button {
+    padding: 10px;
+  }
+}

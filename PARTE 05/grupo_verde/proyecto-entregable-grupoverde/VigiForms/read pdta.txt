@@ -1,7 +1,0 @@
-En VS Code
-Dentro de carpeta "proyecto-entregable-grupoverde"
-git checkout -b develop origin/develop
-
-Dentro de carpeta "VigiForms"
-npm install para crear carpeta "node_modules"
-npm run dev

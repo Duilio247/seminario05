@@ -62,6 +62,21 @@ crud-inventario-electronicos
 - Accede a la aplicación en tu navegador en `http://localhost:3000`.
 - Puedes crear, listar, editar y eliminar productos electrónicos a través de la interfaz de usuario.
 
+## Capturas
+
+- Lista de Productos
+![listas](https://github.com/user-attachments/assets/09f2a5c8-eeb0-480b-b5cd-7f88e68688d2)
+- Crear nuevo producto
+![crear](https://github.com/user-attachments/assets/e47a76d2-06db-4a30-b529-755b445ccaf2)
+- Detalles del producto
+![detalles](https://github.com/user-attachments/assets/2cc01d2b-1ff6-4671-9103-e2f4d902c788)
+- Actualizar producto
+![actualizar](https://github.com/user-attachments/assets/c140ed53-9b69-4377-8e03-392ef0494b29)
+- Eliminar producto
+![eliminar](https://github.com/user-attachments/assets/af3e03a6-2128-45ea-8fb6-8f63e51a66e3)
+- BD
+![bd](https://github.com/user-attachments/assets/d064088d-960b-4048-998d-5db6c7d64ae8)
+
 ## Contribuciones
 
 Las contribuciones son bienvenidas. Si deseas contribuir, por favor abre un issue o envía un pull request.

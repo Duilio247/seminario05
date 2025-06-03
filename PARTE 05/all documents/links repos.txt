@@ -1,2 +1,0 @@
-https://github.com/SENATITACNA/api.equipo.verde (repo verde bd)
-https://github.com/SENATITACNA/proyecto-entregable-grupoverde.git (repo verde front)

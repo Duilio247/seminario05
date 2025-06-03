@@ -1,0 +1,27 @@
+{
+  "name": "crud-inventario-electronicos",
+  "version": "1.0.0",
+  "description": "Proyecto CRUD para gestionar inventario de productos electrónicos.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "multer": "^2.0.0",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "keywords": [
+    "CRUD",
+    "inventario",
+    "productos",
+    "electronicos"
+  ],
+  "author": "Tu Nombre",
+  "license": "MIT"
+}

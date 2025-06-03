@@ -1,0 +1,9 @@
+Campo     | Valor
+----------|-------------------------------------------------------------
+Name      | dbverde
+Host      | dpg-d0mvk795pdvs739qgek0-a.oregon-postgres.render.com
+Port      | 5432
+User      | db_verde_user
+Password  | NYAMxKb5tNEjsnfDAjMsIY2m4RuMrNcg
+Database  | db_verde
+

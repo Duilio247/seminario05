@@ -41,6 +41,7 @@ exports.listarProductos = (req, res) => {
     });
 };
 
+
 exports.obtenerProductoPorId = (req, res) => {
     const id = req.params.id;
     connection.query("SELECT * FROM productos WHERE id = ?", [id], (err, result) => {
@@ -48,6 +49,7 @@ exports.obtenerProductoPorId = (req, res) => {
         res.json(result[0]);
     });
 };
+
 
 // Operación de Actualización (Update):
 exports.actualizarProducto = (req, res) => {
@@ -70,6 +72,7 @@ exports.actualizarProducto = (req, res) => {
         });
     });
 };
+
 
 // Operación de Eliminación (Delete):
 exports.eliminarProducto = (req, res) => {
